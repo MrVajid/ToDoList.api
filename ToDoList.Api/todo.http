@@ -1,0 +1,32 @@
+GET http://localhost:5128/tasks/
+###
+GET http://localhost:5128/tasks/1
+###
+POST http://localhost:5128/tasks
+Content-Type: application/json
+
+{
+    "Task": "Test task 3",
+    "DueDate": "2024-08-11",
+    "PriorityId": "1",
+    "InProgress": true,
+    "Completed": true
+}
+
+###
+PUT http://localhost:5128/tasks/1
+Content-Type: application/json
+
+{
+    "Task": "PUT Test task 2",
+    "DueDate": "2024-08-12",
+    "PriorityId": "1",
+    "InProgress": true,
+    "Completed": true
+}
+
+###
+DELETE http://localhost:5128/tasks/2
+
+###
+GET http://localhost:5128/priorities
